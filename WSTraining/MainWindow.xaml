@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WSTraining"
         mc:Ignorable="d"
-        Title="WSTraining.Main" Height="450" Width="800">
-    <Grid>
-        <DataGrid HorizontalAlignment="Center" Height="259" Margin="0,10,0,0" VerticalAlignment="Top" Width="780" d:ItemsSource="{d:SampleData ItemCount=5}" x:Name="Order"/>
+        Title="WSTraining.Main" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid Loaded="Grid_Loaded">
+        <DataGrid HorizontalAlignment="Center" Height="Auto" Margin="0,10,0,0" VerticalAlignment="Top" Width="Auto" d:ItemsSource="{d:SampleData ItemCount=5}" x:Name="Order" IsReadOnly="True"/>
+        <ComboBox HorizontalAlignment="Left" Height="29" Margin="30,41,0,0" VerticalAlignment="Top" Width="142" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock >User</TextBlock>
+            <TextBlock >Oreder</TextBlock>
+            <TextBlock>Product</TextBlock>
+        </ComboBox>
+        <Button Content="Добавить" HorizontalAlignment="Left" Height="51" Margin="30,361,0,0" VerticalAlignment="Top" Width="142"/>
 
     </Grid>
 </Window>

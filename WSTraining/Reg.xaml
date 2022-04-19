@@ -1,0 +1,21 @@
+﻿<Window x:Class="WSTraining.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WSTraining"
+        mc:Ignorable="d"
+        Title="Reg" Height="450" Width="800">
+
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Height="33" Margin="104,51,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="656" x:Name="Name"/>
+        <TextBox HorizontalAlignment="Left" Height="33" Margin="104,102,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="656" x:Name="Password"/>
+        <TextBox HorizontalAlignment="Left" Height="33" Margin="104,0,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Center" Width="656" x:Name="Email"/>
+        <TextBox HorizontalAlignment="Left" Height="33" Margin="104,155,0,0" TextWrapping="Wrap" Text="Age" VerticalAlignment="Top" Width="656" x:Name="Age"/>
+        <Button HorizontalAlignment="Left" Margin="34,362,0,10" Width="261" Content="Registration" x:Name="Reg" Click="Reg_Click"/>
+        <Button HorizontalAlignment="Left" Margin="478,357,0,15" Width="261" Content="Exit" x:Name="Ex" Click="Ex_Click" />
+        <TextBox HorizontalAlignment="Left" Height="33" Margin="104,250,0,0" TextWrapping="Wrap" Text="Phone" VerticalAlignment="Top" Width="656" x:Name="Phone"/>
+
+    </Grid>
+
+</Window>
