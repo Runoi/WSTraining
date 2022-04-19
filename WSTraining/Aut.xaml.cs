@@ -28,11 +28,11 @@ namespace WSTraining
              var user_pass = db.Users.FirstOrDefault(x => x.Password == Passowrd.Text);
              if(user_name != null & user_pass != null)
              {
-                MessageBox.Show("Вы вошли!");
-                db.Dispose();
-                Close();
                 
-             }
+                db.Dispose();
+                this.DialogResult = true;
+
+            }
             else
             {
                 MessageBox.Show("Неверный логин или пароль!");
@@ -42,7 +42,7 @@ namespace WSTraining
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            this.DialogResult = true;
         }
     }
 }

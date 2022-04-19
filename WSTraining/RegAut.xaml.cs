@@ -31,7 +31,8 @@ namespace WSTraining
 
             if (reg.ShowDialog() == true)
             {
-                Close();
+                MessageBox.Show("Вы зарегестрировались, войдите!");
+                
             }
         }
 
@@ -42,7 +43,8 @@ namespace WSTraining
 
             if (aut.ShowDialog() == true)
             {
-                
+                MessageBox.Show("Вы вошли!");
+                DialogResult = true;
             }
         }
     }

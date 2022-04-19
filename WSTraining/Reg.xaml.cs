@@ -26,12 +26,12 @@ namespace WSTraining
             db.Users.Add(user);
             db.SaveChanges();
             db.Dispose();
-            Close();
+            this.DialogResult = true;
         }
 
         private void Ex_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            this.DialogResult = true;
         }
     }
 }

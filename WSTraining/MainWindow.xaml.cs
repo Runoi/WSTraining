@@ -35,7 +35,7 @@ namespace WSTraining
             ComboBox comboBox = (ComboBox)sender;
             if (comboBox.SelectedItem != null)
             {
-                ComboBoxItem selectedItem; 
+                //ComboBoxItem selectedItem; 
 
                 if (comboBox.SelectedIndex == 0)
                 {
@@ -94,6 +94,11 @@ namespace WSTraining
             {
 
             }
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            db.Dispose();
         }
     }
 }
