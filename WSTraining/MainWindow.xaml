@@ -7,15 +7,16 @@
         mc:Ignorable="d"
         Title="WSTraining.Main" Height="450" Width="800" Loaded="Window_Loaded" Closed="Window_Closed">
     <Grid Loaded="Grid_Loaded">
-        
+
 
         <DataGrid HorizontalAlignment="Left" Height="Auto" Margin="200,10,0,0" VerticalAlignment="Top" Width="Auto" d:ItemsSource="{d:SampleData ItemCount=5}" x:Name="Order" IsReadOnly="True" Grid.ColumnSpan="2"/>
         <ComboBox HorizontalAlignment="Left" Height="29" Margin="30,41,0,0" VerticalAlignment="Top" Width="142" SelectionChanged="ComboBox_SelectionChanged">
             <TextBlock >User</TextBlock>
             <TextBlock >Oreder</TextBlock>
             <TextBlock>Product</TextBlock>
+            <TextBlock>Category</TextBlock>
         </ComboBox>
-        <Button Content="Добавить" HorizontalAlignment="Left" Height="51" Margin="30,361,0,0" VerticalAlignment="Top" Width="142"/>
+        <Button Content="Добавить" HorizontalAlignment="Center" Height="51" Margin="0,361,0,0" VerticalAlignment="Top" Width="742" Click="Button_Click"/>
 
     </Grid>
 </Window>

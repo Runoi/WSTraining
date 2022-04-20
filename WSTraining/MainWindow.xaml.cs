@@ -70,10 +70,20 @@ namespace WSTraining
                     //now_db = selectedItem.Content.ToString();
                     
                 }
+                if (comboBox.SelectedIndex == 3)
+                {
 
-                
-                   
-                
+                    db.Categorys.Load();
+                    Order.ItemsSource = db.Categorys.Local.ToBindingList();
+
+                    //selectedItem = (ComboBoxItem)comboBox.SelectedItem;
+                    //now_db = selectedItem.Content.ToString();
+
+                }
+
+
+
+
             }
             
 
@@ -99,6 +109,15 @@ namespace WSTraining
         private void Window_Closed(object sender, EventArgs e)
         {
             db.Dispose();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Add add = new Add();
+            if (add.ShowDialog() == true)
+            {
+
+            }
         }
     }
 }

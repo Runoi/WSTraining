@@ -65,6 +65,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Add.xaml.cs">
+      <DependentUpon>Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddCat.xaml.cs">
+      <DependentUpon>AddCat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrd.xaml.cs">
+      <DependentUpon>AddOrd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddProduct.xaml.cs">
+      <DependentUpon>AddProduct.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Aut.xaml.cs">
       <DependentUpon>Aut.xaml</DependentUpon>
     </Compile>
@@ -74,6 +86,22 @@
     <Compile Include="Reg.xaml.cs">
       <DependentUpon>Reg.xaml</DependentUpon>
     </Compile>
+    <Page Include="Add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddCat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddOrd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Aut.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
