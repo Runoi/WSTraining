@@ -33,7 +33,7 @@ namespace WSTraining
         public int User_Id { get; set; }
         public DateTime Date { get; set; }
 
-        public ICollection<Order_Prod> Orders { get; set; }
+        virtual public ICollection<Order_Prod> Orders { get; set; }
 
         public Order()
         {
@@ -55,7 +55,7 @@ namespace WSTraining
         public int age { get; set; }
         public string Phone_Number { get; set; }
 
-        public ICollection<Order> Orders { get; set; }
+        virtual public ICollection<Order> Orders { get; set; }
 
         public User()
         {
@@ -75,7 +75,7 @@ namespace WSTraining
         public int Price { get; set; }
         public bool Available { get; set; }
 
-        public ICollection<Order_Prod> Products { get; set; }
+        virtual public ICollection<Order_Prod> Products { get; set; }
 
         public Product()
         {
@@ -91,7 +91,7 @@ namespace WSTraining
         public int Category_Id { get; set; }
         public string Category_Name { get; set; }
 
-        public ICollection<Product> Categorys { get; set; }
+        virtual public ICollection<Product> Categorys { get; set; }
 
         public Category()
         {

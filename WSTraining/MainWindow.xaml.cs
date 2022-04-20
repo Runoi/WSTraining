@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Linq;
 
 namespace WSTraining
 {
@@ -18,13 +19,13 @@ namespace WSTraining
             InitializeComponent();
             db = new OrderContext();
             db.Users.Load();
-            Order.ItemsSource = db.Users.Local.ToBindingList();
-
+            order.ItemsSource = db.Users.Local.ToBindingList();
+            
 
         }
 
-
-        string now_db;
+        public User user;
+        public int now_cb = 0;
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -35,12 +36,13 @@ namespace WSTraining
             ComboBox comboBox = (ComboBox)sender;
             if (comboBox.SelectedItem != null)
             {
-                //ComboBoxItem selectedItem; 
+                
 
                 if (comboBox.SelectedIndex == 0)
                 {
+                    now_cb = 0;
                     db.Users.Load();
-                    Order.ItemsSource = db.Users.Local.ToBindingList();
+                    order.ItemsSource = db.Users.Local.ToBindingList();
                    
                     //selectedItem = (ComboBoxItem)comboBox.SelectedItem;
                     //now_db = selectedItem.Content.ToString();
@@ -50,21 +52,19 @@ namespace WSTraining
                 
                 if(comboBox.SelectedIndex == 1)                    
                 {
-
+                    now_cb = 1;
                     db.Orders.Load();
-                    Order.ItemsSource = db.Orders.Local.ToBindingList();
+                    order.ItemsSource = db.Orders.Local.ToBindingList();
                     
-                    //selectedItem = (ComboBoxItem)comboBox.SelectedItem;
-                    //now_db = selectedItem.Content.ToString();
-                    //now_db = selectedItem.Content.ToString();
+          
 
                 }
                         
                 if(comboBox.SelectedIndex == 2)                       
                 {
-                            
-                    db.Products.Load();                           
-                    Order.ItemsSource = db.Products.Local.ToBindingList();
+                    now_cb = 2;
+                    db.Products.Load();
+                    order.ItemsSource = db.Products.Local.ToBindingList();
                     
                     //selectedItem = (ComboBoxItem)comboBox.SelectedItem;
                     //now_db = selectedItem.Content.ToString();
@@ -72,9 +72,9 @@ namespace WSTraining
                 }
                 if (comboBox.SelectedIndex == 3)
                 {
-
+                    now_cb = 3;
                     db.Categorys.Load();
-                    Order.ItemsSource = db.Categorys.Local.ToBindingList();
+                    order.ItemsSource = db.Categorys.Local.ToBindingList();
 
                     //selectedItem = (ComboBoxItem)comboBox.SelectedItem;
                     //now_db = selectedItem.Content.ToString();
@@ -118,6 +118,50 @@ namespace WSTraining
             {
 
             }
+        }
+
+        private void Redact(object sender, RoutedEventArgs e)
+        {
+
+
+            //MessageBox.Show(Convert.ToString(now_cb));
+            if (now_cb == 0)
+            {
+                user = (User)order.SelectedItem;
+                int user_id = user.User_Id;
+                user = db.Users.FirstOrDefault(x => x.User_Id == user_id);
+                
+                if (user != null)
+                {
+                    
+                    
+                    UserRed userRed = new UserRed();
+                    userRed.Owner = this;
+                    userRed.id= user_id;
+                    userRed.nam.Text = user.Full_Name;
+                    userRed.pass.Text = user.Password;
+                    userRed.email.Text = user.Email;
+                    userRed.age.Text = Convert.ToString(user.age);
+                    userRed.phone.Text = user.Phone_Number;
+                    userRed.ShowDialog();
+                    db.Users.Load();
+                    
+                }
+                
+            }
+            if(now_cb == 1)
+            {
+
+            }
+            if(now_cb == 2)
+            {
+
+            }
+            if(now_cb == 3)
+            {
+
+            }
+
         }
     }
 }

@@ -1,0 +1,19 @@
+﻿<Window x:Class="WSTraining.UserRed"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WSTraining"
+        mc:Ignorable="d"
+        Title="UserRed" Height="450" Width="800">
+    <Grid>
+        <TextBox HorizontalAlignment="Center" Height="34" Margin="0,22,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="672" x:Name="nam"/>
+        <TextBox HorizontalAlignment="Center" Height="37" Margin="0,62,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="672" x:Name="pass"/>
+        <TextBox HorizontalAlignment="Center" Height="46" Margin="0,104,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="672" x:Name="email"/>
+        <TextBox HorizontalAlignment="Center" Height="48" Margin="0,155,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="672" x:Name="age"/>
+        <TextBox HorizontalAlignment="Center" Height="51" Margin="0,208,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="672" x:Name="phone"/>
+        <Button Content="Редактировать" HorizontalAlignment="Center" Height="67" Margin="0,264,0,0" VerticalAlignment="Top" Width="702" x:Name="red" Click="red_Click"/>
+        <Button Content="Удалить" HorizontalAlignment="Center" Height="67" Margin="0,336,0,0" VerticalAlignment="Top" Width="702" x:Name="red_Copy" Click="del_Click"/>
+
+    </Grid>
+</Window>

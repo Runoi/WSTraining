@@ -28,6 +28,8 @@ namespace WSTraining
             db.SaveChanges();
             db.Dispose();
             this.DialogResult = true;
+
+            
         }
     }
 }
